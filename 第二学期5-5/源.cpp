@@ -11,15 +11,16 @@ int main()
 	string s = "";
 	getline(cin, s);
 	stack<char> lab;
-	for (int i = 0; i < s.length(); i++)
+	int len = s.length();
+	for (int i = 0; i < len; i++)
 	{
-		if (s[i] == '(' )
+		if (s[i] == '(')
 		{
 			lab.push(s[i]);
 		}
 		else if (s[i] == ')')
 		{
-			if (lab.empty()|| lab.top() != '(')
+			if (lab.empty())
 				T = false;
 			else
 			{
